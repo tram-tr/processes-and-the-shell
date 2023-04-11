@@ -1,6 +1,6 @@
-# Project 1: System Calls and Error Checking
+# Project 2: Processes and the Shell
 
-This is Project 1 of [CSE-34341-SVS-Spring-2023](https://github.com/patrick-flynn/CSE34341-SVS-Sp2023/blob/main/index.md)
+This is Project 2 of [CSE-34341-SVS-Spring-2023](https://github.com/patrick-flynn/CSE34341-SVS-Sp2023/blob/main/index.md)
 
 ## Student
 
