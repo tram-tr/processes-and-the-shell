@@ -57,19 +57,24 @@ The built in change-dir command should cause the shell to change its working dir
 
 > <samp>myshell> change-dir /tmp</samp>
 
+ 
 ## print-dir
  
 The built in  print-dir command should cause the shell to print the current working directory:
 
-> <samp>myshell> print-dir\</samp>
-> <samp>/escnfs/home/dthain</samp>
+> <samp>myshell> print-dir</samp>
+ 
+> <samp>/escnfs/home/htrinh</samp>
+
 
 ## copy-file
 
 The built in  copy-file command should duplicate one file or directory to another:
 
-> <samp>myshell> copy-file old.c new.c\</samp>
+> <samp>myshell> copy-file old.c new.c</samp>
+ 
 > <samp>copy-file: copied 2836 bytes from old.c to new.c</samp>
+ 
 
 ## start-process
 
@@ -77,9 +82,12 @@ The start-process command should start another program with command line argumen
 
 For example:
 
-> <samp>myshell> start-process cp data.txt copy.txt\</samp>
-> <samp>myshell: process 346 started\</samp>
+> <samp>myshell> start-process cp data.txt copy.txt</samp>
+ 
+> <samp>myshell: process 346 started</samp>
+ 
 > <samp>myshell></samp>
+ 
 
 ## wait-for-any-child
 
@@ -87,45 +95,65 @@ The wait-for-any-child command causes the shell to wait for any child process to
 
 For example:
 
-> <samp>myshell> wait-for-any-child\</samp>
+> <samp>myshell> wait-for-any-child</samp>
+ 
 > <samp>myshell: process 502 exited normally with status 5</samp>
 
-
-> <samp>myshell> wait-for-any-child\</samp>
+> <samp>myshell> wait-for-any-child</samp>
+ 
 > <samp>myshell: process 347 exited abnormally with signal 11: Segmentation fault.</samp>
 
-
-> <samp>myshell> wait-for-any-child\</samp>
+> <samp>myshell> wait-for-any-child</samp>
+ 
 > <samp>myshell: No children.</samp>
+ 
 
 ## wait-for-a-child
 
 The wait-for-a-child command does the same thing, but waits for a specific child process to exit:
-myshell> wait-for-a-child 346
-myshell: process 346 exited normally with status 0
-myshell> wait-for-a-child 346
-myshell: No such process.
+ 
+> <samp>myshell> wait-for-a-child 346</samp>
+ 
+> <samp>myshell: process 346 exited normally with status 0</samp>
+ 
+> <samp>myshell> wait-for-a-child 346</samp>
+
+> <samp>myshell: No such process.</samp>
+ 
 
 ## run-process
 
-The run-process command should combine the behavior of start-process and wait-for-a-child. run-process should start a program, wait for that particular process to finish, and print the exit status. For example:
-myshell> run-process date
-Mon Jan 19 11:51:57 EST 2009
-myshell: process 348 exited normally with status 0
+The run-process command should combine the behavior of start-process and wait-for-a-child. run-process should start a program, wait for that particular process to finish, and print the exit status. 
+ 
+For example:
+ 
+> <samp>myshell> run-process date</samp>
+
+> <samp>Mon Jan 19 11:51:57 EST 2023</samp>
+ 
+> <samp>myshell: process 348 exited normally with status 0</samp>
+ 
 
 ## kill-process
 
 The kill-process command should kill the process whose pid is given.
-myshell> kill-process 346
-myshell: process 346 has been killed
-myshell> kill-process 346
-myshell: unable to kill process 346
+ 
+> <samp>myshell> kill-process 346</samp>
+ 
+> <samp>myshell: process 346 has been killed</samp>
+ 
+> <samp>myshell> kill-process 346</samp>
+ 
+> <samp>myshell: unable to kill process 346</samp>
+ 
 
 ## Other
 
 After each command completes, the program will continue to print a prompt and accept another line of input. The shell should exit with status zero if the command is quit or exit or the input reaches end-of-file. If the user types a blank line, simply print another prompt and accept a new line of input. If the user types any other command, the shell should print a reasonable error message:
 
-myshell> bargle ls -la
-myshell: unknown command: bargle
+ 
+> <samp>myshell> bargle ls -la</samp>
+ 
+> <samp>myshell: unknown command: bargle</samp>
 
 
