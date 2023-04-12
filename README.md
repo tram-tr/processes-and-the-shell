@@ -38,47 +38,58 @@ The built in list-files command should cause the shell to list the contents of t
 
 For example:
 > <samp>myshell> list-files</samp>
-> <samp>D .         user[rwx]group[r-x]other[r-x] 0 bytes</samp>
-> <samp>D ..        user[rwx]group[r-x]other[r-x] 0 bytes</samp>
-> <samp>F words.txt user[rw-]group[r--]other[r--] 105 bytes</samp>
-> <samp>F myshell.c user[rw-]group[r--]other[r--] 2836 bytes</samp>
+> <samp>D .         user[rwx]group[r-x]other[r-x] 0 bytes\</samp>
+> <samp>D ..        user[rwx]group[r-x]other[r-x] 0 bytes\</samp>
+> <samp>F words.txt user[rw-]group[r--]other[r--] 105 bytes\</samp>
+> <samp>F myshell.c user[rw-]group[r--]other[r--] 2836 bytes\</samp>
 > <samp>... and so on ...</samp>
 
 ## change-dir
 
 The built in change-dir command should cause the shell to change its working directory to the named directory:
-myshell> change-dir /tmp
+
+> <samp>myshell> change-dir /tmp</samp>
 
 ## print-dir
  
 The built in  print-dir command should cause the shell to print the current working directory:
-myshell> print-dir
-/escnfs/home/dthain
+
+> <samp>myshell> print-dir\</samp>
+> <samp>/escnfs/home/dthain</samp>
 
 ## copy-file
 
 The built in  copy-file command should duplicate one file or directory to another:
-myshell> copy-file old.c new.c
-copy-file: copied 2836 bytes from old.c to new.c
+
+> <samp>myshell> copy-file old.c new.c\</samp>
+> <samp>copy-file: copied 2836 bytes from old.c to new.c</samp>
 
 ## start-process
 
-The start-process command should start another program with command line arguments, print out the process number of the running program, and then accept another line of input. For example:
-myshell> start-process cp data.txt copy.txt
-myshell: process 346 started
-myshell>
+The start-process command should start another program with command line arguments, print out the process number of the running program, and then accept another line of input. 
+
+For example:
+
+> <samp>myshell> start-process cp data.txt copy.txt\</samp>
+> <samp>myshell: process 346 started\</samp>
+> <samp>myshell></samp>
 
 ## wait-for-any-child
 
-The wait-for-any-child command causes the shell to wait for any child process to exit. When this happens, indicate whether the exit was normal or abnormal, along with the exit code or signal number and name, respectively. Display any errors encountered. For example:
-myshell> wait-for-any-child
-myshell: process 502 exited normally with status 5
+The wait-for-any-child command causes the shell to wait for any child process to exit. When this happens, indicate whether the exit was normal or abnormal, along with the exit code or signal number and name, respectively. Display any errors encountered. 
 
-myshell> wait-for-any-child
-myshell: process 347 exited abnormally with signal 11: Segmentation fault.
+For example:
 
-myshell> wait-for-any-child
-myshell: No children.
+> <samp>myshell> wait-for-any-child\</samp>
+> <samp>myshell: process 502 exited normally with status 5</samp>
+
+
+> <samp>myshell> wait-for-any-child\</samp>
+> <samp>myshell: process 347 exited abnormally with signal 11: Segmentation fault.</samp>
+
+
+> <samp>myshell> wait-for-any-child\</samp>
+> <samp>myshell: No children.</samp>
 
 ## wait-for-a-child
 
