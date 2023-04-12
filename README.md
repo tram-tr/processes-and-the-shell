@@ -8,11 +8,11 @@ This is Project 2 of [CSE-34341-SVS-Spring-2023](https://github.com/patrick-flyn
 
 # Project Goals
 
-The goals of this project are:
+The goals of this project are:\
 
-To learn the relationship between the kernel, the shell, and user-level programs.
-To learn how to employ the Unix process management system calls.
-To gain more experience in rigorous error handling.
+- To learn the relationship between the kernel, the shell, and user-level programs.
+- To learn how to employ the Unix process management system calls.
+- To gain more experience in rigorous error handling.
 
 # Essential Requirements
 
@@ -20,17 +20,17 @@ myshell is a program that is capable of executing, managing, and monitoring user
 
 myshell should print out a prompt like myshell> when it is ready to accept input. It must read a line of input, accepting several possible commands:
 
-list-files
-change-dir
-print-dir
-copy-file
-start-process
-wait-for-any-child
-wait-for-a-child
-run-process
-kill-process
-quit
-exit
+- list-files
+- change-dir
+- print-dir
+- copy-file
+- start-process
+- wait-for-any-child
+- wait-for-a-child
+- run-process
+- kill-process
+- quit
+- exit
 
 ## list-files
 
