@@ -34,15 +34,18 @@ myshell should print out a prompt like myshell> when it is ready to accept input
 
 ## list-files
 
-The built in list-files command should cause the shell to list the contents of the current directory, displaying each filename, type (use F for file and D for directory) and permission bits (see below) , and size in bytes – roughly the same information as ls -l\
+The built in list-files command should cause the shell to list the contents of the current directory, displaying each filename, type (use F for file and D for directory) and permission bits (see below) , and size in bytes – roughly the same information as ls -l
 
 For example:
+Monospaced
+<samp>
 > myshell> list-files
 > D .         user[rwx]group[r-x]other[r-x] 0 bytes\
 > D ..        user[rwx]group[r-x]other[r-x] 0 bytes\
 > F words.txt user[rw-]group[r--]other[r--] 105 bytes\
 > F myshell.c user[rw-]group[r--]other[r--] 2836 bytes\
 > ... and so on ...
+</samp>
 
 ## change-dir
 
